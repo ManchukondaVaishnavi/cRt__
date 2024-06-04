@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+     float p;
+    scanf("%f",&p);
+    printf("%.0f\n",floor(p));
+    printf("%.1f\n",ceil(p));
+    printf("%.1f",floor(p));
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
