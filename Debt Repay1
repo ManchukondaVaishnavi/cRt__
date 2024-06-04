@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int x,r,y;
+    scanf("%d%d%d",&x,&r,&y);
+    float z=(float)r*x*y/100;
+    printf("%.2f\n",z);
+    printf("%.2f\n",(float)x+z);
+    printf("%.2f\n",(float)z*2/100);
+   float k=(float)z*2/100;
+    float o=(float)x+z-k;
+    printf("%.2f",o);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
