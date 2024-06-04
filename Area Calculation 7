@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int s,l,b;
+    scanf("%d%d%d",&s,&l,&b);
+    float r;
+    scanf("%f",&r);
+    printf("%d\n",s*s);
+    printf("%d\n",l*b);
+    printf("%.2f\n",3.14*r*r);
+   /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
