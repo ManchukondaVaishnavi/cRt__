@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int c,ben,black;
+    scanf("%d%d%d",&c,&ben,&black);
+    int bens;
+    float div=(float)ben/100;
+    bens=div*c;
+    printf("%d\n",bens);
+    int blacks;
+    float div2=(float)black/100;
+    blacks=div2*(c-bens);
+    printf("%d\n",blacks);
+    int p;
+    p=(c-bens-blacks)/3;
+    printf("%d",p);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
