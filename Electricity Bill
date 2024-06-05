@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int u;
+    scanf("%d",&u);
+   float r;
+    if(u<=200){
+        r=(float)u*(0.5);
+    }
+    else if(u<=400){
+        r=(float)u*0.65+100;
+    }
+    else if(u<=600){
+        r=(float)u*0.80+200;
+    }
+    else{
+        r=(float)u*1.25+425;
+    }
+    printf("Rs.%.0f",r);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
