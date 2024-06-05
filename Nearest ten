@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int a;
+    scanf("%d",&a);
+    int z=a%10;
+    int h=10-z;
+    if(h<=5){
+        printf("%d",(a+h));
+    }
+    else{
+        printf("%d",(a-z));
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
