@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n;
+    scanf("%d",&n);
+    int z=n%10;
+    while(n>0){
+        int x=n%10;
+        if(x<z){
+            z=x;
+        }
+        n=n/10;
+    }
+    printf("%d",z);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
