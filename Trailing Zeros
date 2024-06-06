@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n,p=1,c=0;
+    scanf("%d",&n);
+    while(n>=2){
+        p=p*n;
+        n--;
+    }
+    //while(p>0){
+        int x=p%10;
+        while(x==0){
+            c++;
+            p=p/10;
+            x=p%10;
+            
+            
+        }
+        //p=p/10;
+    //}
+    printf("%d",c);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
