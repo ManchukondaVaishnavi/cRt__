@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n,p=1;
+    scanf("%d",&n);
+    if(n>=1&&n<=10000000){
+    while(n>=1){
+        int x=n%10;
+        if(x==0){
+            
+        }else{
+        p=p*x;
+        }
+        n=n/10;
+    }
+    printf("%d",p);
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
