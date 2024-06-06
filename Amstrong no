@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n;
+    scanf("%d",&n);
+    int x=log10(n)+1;
+    int t=n;
+    int sum=0;
+    while(n>0){
+        int p=n%10;
+        sum+=pow(p,x);
+        n=n/10;
+    }
+    if(t==sum){
+        
+    
+    printf("Yes");
+    }
+    else{
+        printf("No");
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
