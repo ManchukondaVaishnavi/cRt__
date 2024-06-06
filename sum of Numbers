@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    int x;
+    scanf("%d",&x);
+   int sum=x;
+    
+       while(x!=-1){
+           scanf("%d",&x);
+           sum+=x;
+           
+       }
+    printf("%d",sum+1);
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
