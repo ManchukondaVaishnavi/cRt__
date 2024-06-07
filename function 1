@@ -1,0 +1,8 @@
+#include<stdio.h>
+void show(){
+    printf("show");
+}
+int main(){
+  
+  show();
+}
