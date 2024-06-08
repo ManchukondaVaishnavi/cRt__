@@ -1,0 +1,14 @@
+#include <stdio.h>
+int area(){
+    int l,b;
+    scanf("%d%d",&l,&b);
+    return l*b;
+}
+
+
+int main() {
+    // Write C code here
+   // printf("Try programiz.pro");
+printf("%d",area());
+    return 0;
+}
