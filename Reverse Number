@@ -1,0 +1,21 @@
+#include <stdio.h>
+int Reverse(int n){
+    int r=0;
+   while(n>0){
+       int x=n%10;
+       r=r*10+x;
+       n=n/10;
+   }
+   return r;
+   
+}
+
+
+int main() {
+    // Write C code here
+  int n;
+ scanf("%d",&n);
+  // printf("Try programiz.pro");
+printf("%d",Reverse(n));
+    return 0;
+}
