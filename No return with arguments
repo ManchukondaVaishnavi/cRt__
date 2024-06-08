@@ -1,0 +1,20 @@
+#include <stdio.h>
+void Reverse(int n){
+    int rev=0;
+   while(n>0){
+       int x=n%10;
+       n=n/10;
+      rev=rev*10+x;
+   }
+  printf("%d",rev);
+}
+
+
+int main() {
+    // Write C code here
+  int l;
+ scanf("%d",&l);
+  // printf("Try programiz.pro");
+Reverse(l);
+    return 0;
+}
