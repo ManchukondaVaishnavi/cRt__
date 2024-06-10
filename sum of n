@@ -1,0 +1,16 @@
+#include <stdio.h>
+//void funB(int);
+int add(int n){
+    if(n==0){
+        return 0;
+    }
+    else{
+        return n+add(n-1);
+    }
+}
+
+int main(){
+    printf("%d",add(5));
+    return 0;
+    
+}
