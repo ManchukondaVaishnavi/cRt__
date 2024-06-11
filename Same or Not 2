@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n,m;
+    scanf("%d%d",&n,&m);
+    int a[n],b[m];
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(int j=0;j<n;j++){
+        scanf("%d",&b[j]);
+    }
+    if(n==m){
+        int h=0;
+        while(h<n){
+            if(a[h]==b[h]){
+                h++;
+            }else{
+                break;
+            }
+        }
+        if(h==n){
+            printf("Same");
+        }
+        else{
+            printf("Not Same");
+        }
+        
+    }
+    else{
+       printf("Not Same"); 
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
