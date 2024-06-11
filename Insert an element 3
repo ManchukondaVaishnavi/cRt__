@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n;
+    scanf("%d",&n);
+    int a[n];
+    
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int pos,x;
+    scanf("%d%d",&pos,&x);
+    if(pos>n){
+        printf("Invalid Input");
+    }
+    else{
+    int i=0;
+        int b[n+1];
+        while(i<pos-1){
+            b[i]=a[i];
+            i++;
+        }
+        b[pos-1]=x;
+        for(int o=pos;o<=n;o++){
+            b[o]=a[o-1];
+        }
+        
+    for(int j=0;j<n+1;j++){
+    printf("%d\n",b[j]);
+    }
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
