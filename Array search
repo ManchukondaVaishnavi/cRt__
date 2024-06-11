@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+int a[n];
+int i;
+for(i=0;i<5;i++){
+    scanf("%d",&a[i]);
+   
+}
+int x;
+scanf("%d",&x);
+for(i=0;i<n;i++){
+    if(a[i]==x){
+    printf("Element found at %d",i);
+    break;
+    }
+    else if(i==n-1){
+        printf("Element not found");
+    }
+}
+
+
+return 0;
+}
