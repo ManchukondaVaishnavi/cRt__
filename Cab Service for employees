@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   int n,start,end;
+    scanf("%d%d%d",&n,&start,&end);
+    int a[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+   int j=0;
+    while(j<n){
+        if(start<=a[j]&&a[j]<=end){
+        printf("%d ",a[j]);
+            }
+        j++;
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
