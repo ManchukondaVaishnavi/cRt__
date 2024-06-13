@@ -1,0 +1,24 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+  char s[100];
+  scanf("%s",s);
+  int a=0,d=0,sy=0,n=0;
+  for(n=0;s[n]!='\0';n++);
+for(int i=0;i<n;i++){
+    int temp=s[i];
+    if((temp>=65&&temp<=90)||(temp>=97&&temp<=122)){
+        a++;
+    }
+    else if(temp>=48&&temp<=57){
+        d++;
+    }
+    else{
+        sy++;
+    }
+}
+printf("Alphabets:%d\nDigits:%d\nsymbols:%d\n",a,d,sy);
+return 0;
+}
