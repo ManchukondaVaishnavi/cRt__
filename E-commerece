@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+char s[100],s1[100];
+    scanf("%s",s);
+    int n;
+    scanf("%d",&n);
+    int i=0,k=0;
+    while(s[i]!='\0'){
+        int j=0;
+        while(j<n){
+            s1[k++]=s[i++];
+            j++;
+        }
+        s1[k++]=' ';
+    }
+    printf("%s",s1);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
