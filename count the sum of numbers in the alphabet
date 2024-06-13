@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+char s[100];
+    scanf("%s",s);
+    int sum=0;
+    for(int i=0;i<strlen(s);i++){
+        if(s[i]>=48&&s[i]<=57){
+            int x=(int)s[i]-48;
+            sum+=x;
+        }
+    }
+    printf("%d",sum);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
