@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char s1[100],s2[100];
+    scanf("%s",s1);
+    int n=0,j=0;
+    for(n=0;s1[n]!='\0';n++);
+    for(int i=n-1;i>=0;i--){
+        s2[j++]=s1[i];
+        //printf("%c",s1[i]);
+    }
+    s2[j]='\0';
+    int x=(int)strcmp(s1,s2);
+    if(x==0){
+        printf("Strings are palindrome");
+    }
+    else{
+        printf("Strings are not palindrome");
+    }
+
+    return 0;
+}
