@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+char s[100],s1[100];
+    scanf("%s",s);
+    int k=0;
+   
+    for(int i=1;i<strlen(s);i=i+2){
+        if(s[i-1]<s[i]){
+            s1[k++]=s[i];
+        }else{
+            s1[k++]=s[i-1];
+        }
+        
+    }
+    if(strlen(s)%2!=0){
+            s1[k++]=s[strlen(s)-1];
+        }
+    s1[k]='\0';
+    
+   
+    
+    printf("%s",s1);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
