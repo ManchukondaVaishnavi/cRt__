@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+  char s[100];
+  scanf("%s",s);
+
+  char s1[100];
+  scanf("%s",s1);
+  char s3[100];
+  int i;
+  for(i=0;s[i]!='\0';i++){
+      s3[i]=s[i];
+  }
+ 
+  for(int k=0;s1[k]!=0;k++){
+      s3[i++]=s1[k];
+  }
+  s3[i]='\0';
+  printf("%s",s3);
+  
+  
+    return 0;
+}
