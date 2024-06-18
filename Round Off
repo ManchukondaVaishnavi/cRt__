@@ -1,0 +1,12 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+       double n=s.nextDouble();
+        System.out.printf("%.0f\n%.1f\n%.1f",Math.floor(n),Math.ceil(n),Math.floor(n));
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
