@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int X=s.nextInt();
+        int R=s.nextInt();
+        int Y=s.nextInt();
+    float i=X*((float)R/100)*Y;
+        System.out.printf("%.2f\n",i);
+        float t=new Float(X+i);
+        System.out.printf("%.2f\n",t);
+        float d=i*((float)2/100);
+        System.out.printf("%.2f\n",d);
+        float n=t-d;
+        System.out.printf("%.2f",n);/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
