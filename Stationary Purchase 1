@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+       int q=s.nextInt();
+        int p=s.nextInt();
+        
+       System.out.println("Quantity Ordered "+q);
+            System.out.println("Price per item is Rs."+p);
+            System.out.println("Total Amount = Rs."+q*p);
+        float tot=q*p;
+        if(q>200){
+           float d=(float)0.2*tot;
+            tot=(q*p)-d;
+            System.out.printf("Discount Earned = Rs.%.1f\n",d);
+            System.out.printf("Amount after Discount - Rs.%.1f\n",tot);
+        }
+        float gst=tot*(float)0.18;
+      System.out.printf("GST - Rs.%.1f\n",gst);
+        System.out.printf("Net Amount Payable is Rs.%.1f",tot+gst);
+        
+    }
+}
