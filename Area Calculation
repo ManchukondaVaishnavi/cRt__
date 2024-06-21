@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+        int s1=s.nextInt();
+        int l=s.nextInt();
+        int b=s.nextInt();
+        float r=s.nextFloat();
+        System.out.println(s1*s1+"\n"+l*b);
+        float a=(float)3.14*r*r;
+        System.out.printf("%.2f",a);
+    }
+}
