@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int n1=s.nextInt();
+        int p=n*n1;
+        if(p>1000){
+            System.out.print(n+n1);
+        }
+        else{
+System.out.print(p);
+        }/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
