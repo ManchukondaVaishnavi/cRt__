@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        if(n>=30&&n<=50){
+            System.out.print("Average");
+        }
+        else if(n>=51&&n<=60){
+            System.out.print("Good");
+        }
+        else if(n>=61&&n<=80){
+            System.out.print("Excellent");
+        }
+        else if(81<=n&&n<=100){
+          System.out.print("Outstanding");
+        }else{
+            System.out.print("Invalid Input");
+        }/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
