@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int x=s.nextInt();
+        int n=x;
+        String s1=Integer.toString(x);
+        int l=s1.length();
+        int sum=0;
+        while(n>0){
+           int r=n%10;
+            sum+=Math.pow(r,l);
+            n=n/10;
+            
+        }
+        if(sum==x){
+            System.out.print("Yes");
+        }
+        else{
+            System.out.print("No");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
