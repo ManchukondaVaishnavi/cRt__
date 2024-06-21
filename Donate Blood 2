@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int w=s.nextInt();
+        float h=s.nextFloat();
+        if(a>=18&&w>=45&&h>=5.5){
+System.out.print("He or She can donate blood");
+        }
+        else{
+            System.out.print("He or She unable to donate blood");
+        }/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
