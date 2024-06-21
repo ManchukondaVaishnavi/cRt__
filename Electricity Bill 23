@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+        int u=s.nextInt();
+        if(u<=200){
+            System.out.print("Rs."+(int)(u*0.5));
+        }
+        else if(u<=400){
+           System.out.print("Rs."+(int)(u*0.65+100));
+        }
+        else if(u<=600){
+            System.out.print("Rs."+(int)(u*0.80+200));
+        }
+        else{
+            System.out.print("Rs."+(int)(u*1.25+425));
+        }/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
