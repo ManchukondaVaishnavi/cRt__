@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int r1=1,r2=1,r3=0;
+        
+        int n=s.nextInt();
+        if(n==1||n==2){
+            System.out.print("1");
+            return;
+        }
+        for(int i=3;i<=n;i++){
+            r3=r1+r2;
+            r1=r2;
+            r2=r3;
+        }
+        System.out.print(r3);/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
