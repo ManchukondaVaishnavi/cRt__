@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+           public static int SumofDigits(int n){
+               int s=0;
+           
+               while(n>0){
+                   int x=n%10;
+                   s+=x;
+                   n=n/10;
+               }
+          s=Singledig(s);
+               return s;
+           }
+    public static int Singledig(int m){
+        if(m>9){
+            m=SumofDigits(m);
+        }
+        return m;
+    }
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int sum=SumofDigits(n);
+      // int sin=Singledig(sum); 
+      long fact=1;
+        while(sum>1){
+            fact*=sum;
+            sum--;
+        }
+        System.out.print(fact);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
