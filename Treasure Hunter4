@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int ben=s.nextInt();
+        int black=s.nextInt();
+      int bens;
+    float div=(float)ben/100;
+    bens=(int)(div*n);
+        System.out.println(bens);
+        float div2=(float)black/100;
+      int blacks=(int)(div2*(n-bens));
+        System.out.println(blacks);
+        int p=(int)(n-bens-blacks)/3;
+        System.out.print(p);/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
