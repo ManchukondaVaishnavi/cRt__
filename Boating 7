@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      Scanner s=new Scanner(System.in);
+        int w=s.nextInt();
+        int a=s.nextInt();
+        int c=s.nextInt();
+        if(a*75+c*30<=w){
+            System.out.println("Boat is stable");
+        }
+        else{
+            System.out.println("Boat will drown");
+        }/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
