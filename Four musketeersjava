@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int x1=s.nextInt();
+        int y1=s.nextInt();
+        int x2=s.nextInt();
+        int y2=s.nextInt();
+        int x3=s.nextInt();
+        int y3=s.nextInt();
+        float x=(float)(x1+x2+x3)/3;
+        float y=(float)(y1+y2+y3)/3;
+    
+        System.out.printf("%.1f\n%.1f",x,y);/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
