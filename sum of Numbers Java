@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+       int sum=0,n;
+        do{
+         n=s.nextInt();
+            sum+=n;
+        }
+        while(n!=-1);
+        System.out.print(sum+1);
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
