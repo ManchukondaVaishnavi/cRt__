@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+        int sum=0,c=0,r;
+       
+        while(n>0){
+            r=n%10;
+            n=n/10;
+           c=0;
+            for(int i=1;i<=r;i++){
+                if(r%i==0){
+                    c++;
+                }
+            }
+            if(c==2){
+                sum=sum+r;
+            }
+           
+        }
+      
+        System.out.print(sum);/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
