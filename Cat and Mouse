@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int t=s.nextInt();
+        for(int h=0;h<t;h++){
+        int x=s.nextInt();
+        int y=s.nextInt();
+        int z=s.nextInt();
+        int i=0,j=0;
+        if(x>z){
+           i=x-z;
+        }else{
+            i=z-x;
+        }
+        if(y>z){
+            j=y-z;
+        }
+        else{
+            j=z-y;
+        }
+        if(i>j){
+           System.out.print("Cat B\n"); 
+        }
+        else if(j>i){
+            System.out.print("Cat A\n");
+        }
+        else{
+            System.out.print("Mouse C\n");
+        }
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
