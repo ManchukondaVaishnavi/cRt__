@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        
+        String str=s.nextLine();
+        int c=s.nextInt();
+        int j=0,k=0;
+            while(k<str.length()){
+                j=0;
+                while(j<c&&k<str.length()){
+            System.out.print(str.charAt(k));
+            
+             k++;       //System.out.print(" ");
+            j++;
+            }
+        
+                System.out.print(" ");
+               
+            }
+            
+            
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
