@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String st=s.nextLine();
+        String st1=st.toLowerCase();
+        int v=0,co=0,w=0,d=0,sy=0;
+        for(int i=0;i<st.length();i++){
+            char c=st1.charAt(i);
+            if(c>=97&&c<=122){
+                if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+                    v++;
+                }
+                else{
+                    co++;
+                }
+            }
+            else if(c==' '){
+                w++;
+            }
+            else if(c>=48&&c<=57){
+                d++;
+            }
+            else{
+                sy++;
+            }
+        }
+        System.out.println("Vowels:"+v+"\nConsonants:"+co+"\nWhite Spaces:"+w+"\nDigits:"+d+"\nSymbols:"+sy);/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
