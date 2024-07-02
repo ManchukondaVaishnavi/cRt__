@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+        String str=s.nextLine();
+        int r=s.nextInt();
+        char d=s.next().charAt(0);
+        String str1="";
+        if(d=='L'){
+            for(int i=r;i<str.length();i++){
+                str1+=str.charAt(i);
+            }
+            for(int i=0;i<r;i++){
+                str1+=str.charAt(i);
+            }
+        }
+        else{
+            for(int i=str.length()-r;i<str.length();i++){
+                str1+=str.charAt(i);
+            }
+            for(int i=0;i<str.length()-r;i++){
+                str1+=str.charAt(i);
+            }
+        }
+        System.out.print(str1);/* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
