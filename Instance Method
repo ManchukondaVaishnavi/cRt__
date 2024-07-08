@@ -1,0 +1,20 @@
+import java.util.*;
+public class Sample{
+int a=10;
+static b=20;
+public void show(){
+System.out.println(a+" "+b);
+}
+public static void display(){
+Sample s=new Sample();
+System.ouy.println(a+" "+Sample.b);
+}
+}
+public class InstanceStatic{
+public static void main(String[] args){
+Sample sa=new Sample();
+sa.show();
+Sample.display();
+sa.display();
+}
+}
