@@ -1,0 +1,26 @@
+import java.util.*;
+class Parent{
+public void surname(){
+System.out.println("Manchukonda");
+}
+void designation(){
+System.out.println("Ph.D");
+}
+}
+class Child extends Parent{
+void getName(){
+System.out.println("Vaishnavi");
+}
+void designation(){
+System.out.println("B.Tech");
+}
+}
+class MethodOverriding{
+public static void main(String[] args){
+Child d=new Child();
+d.surname();
+d.getName();
+d.designation();
+}
+}
+
