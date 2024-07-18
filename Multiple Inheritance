@@ -1,0 +1,22 @@
+import java.util.*;
+interface Inter1{
+public void m1();
+}
+interfece Inter2{
+public void m2();
+}
+class First implements Inter1,Inter2{
+public void m1(){
+System.out.print("inter1 implements");
+}
+public void m2(){
+System.out.print("inter2 implements");
+}
+}
+class MultipleInheritance{
+public static void main(String[] args){
+First f=new First();
+f.m1();
+f.m2();
+}
+}
