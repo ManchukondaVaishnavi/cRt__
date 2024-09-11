@@ -1,0 +1,58 @@
+import java.util.*;
+public class LinkedList{
+    public static Node head,tail;
+    public static class Node{
+        int d;
+        Node next;
+        Node(int d){
+            this.d=d;
+        }
+    }
+    public static void create(int x){
+        if(head==null){
+        Node n=new Node(x);
+        head=tail=n;
+        }
+        else{
+          Node temp=head;
+          while(temp!=null){
+              if(temp.d==x){
+                  System.out.println("Duplicate data");
+                  return;
+              }
+              temp=temp.next;
+          }
+          Node n=new Node(x);
+          tail.next=n;
+          tail=n;
+        }
+    }
+    public static void print(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.print(temp.d+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        LinkedList l=new LinkedList();
+        System.out.println("1.create\n2.Print\n3.Exit");
+        for(;;){
+        System.out.println("Enter your choice:");
+        int ch=s.nextInt();
+        if(ch==1){
+            System.out.println("Enter the element:");
+            int x=s.nextInt();
+            l.create(x);
+        }
+        else if(ch==2){
+            l.print();
+        }
+        else if(ch==3){
+            break;
+        }
+        }
+    }
+}
