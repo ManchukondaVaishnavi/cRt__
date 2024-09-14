@@ -1,0 +1,135 @@
+import java.util.*;
+public class CircularLinkedList{
+    public static Node head;
+    public static class Node{
+        int d;
+        Node next;
+        Node(int d){
+            this.d=d;
+        }
+    }
+    public static void insertLast(int x){
+        Node n=new Node(x);
+        if(head==null){
+            head=n;
+            n.next=head;
+        }
+        else{
+            Node temp=head;
+            while(temp.next!=head){
+                temp=temp.next;
+            }
+            temp.next=n;
+            n.next=head;
+        }
+    }
+    
+    public static void insertBeg(int x){
+        Node n=new Node(x);
+        if(head==null){
+            head=n;
+            n.next=head;
+        }
+        else{
+        Node temp=head;
+        while(temp.next!=head){
+            temp=temp.next;
+        }
+        temp.next=n;
+        n.next=head;
+        head=n;
+        }
+    }
+    public static void insertPos(int x,int p){
+        Node n=new Node(x);
+        Node temp=head;
+        Node pre=null;
+        int i=1;
+        while(temp.next!=head&&i<p){
+            pre=temp;
+            temp=temp.next;
+            i++;
+        }
+        if(temp.next!=head){
+            pre.next=n;
+            n.next=temp;
+        }
+    }
+    public static void display(){
+        Node temp=head;
+        while(temp.next!=head){
+            System.out.print(temp.d+" ");
+            temp=temp.next;
+        }
+        System.out.println(temp.d);
+    }
+    public static void deleteBeg(){
+    Node temp=head;
+    while(temp.next!=head){
+        temp=temp.next;
+    }
+    temp.next=head.next;
+    head=head.next;
+    }
+    public static void deletePos(int p){
+        int i=1;
+        Node pre=null;
+        Node temp=head;
+        while(i<p&&temp.next!=null){
+            pre=temp;
+            temp=temp.next;
+            i++;
+        }
+        pre.next=temp.next;
+    }
+    public static void deleteLast(){
+        Node temp=head;
+        while(temp.next.next!=head){
+            temp=temp.next;
+        }
+        temp.next=head;
+    }
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+    while(true){
+        System.out.println("1.Insert at Begining\n2.Insert at position\n3.Insert at Last\n4.Display\n5.Delete at Begining\n6.Delete at Position\n7.Delete at last\n8.Exit");
+        System.out.println("Enter your choice:");
+        int ch=s.nextInt();
+        if(ch==1){
+            System.out.println("Enter the element:");
+            int x=s.nextInt();
+            insertBeg(x);
+        }
+        else if(ch==2){
+            System.out.println("Enter the element:");
+            int x=s.nextInt();
+            System.out.println("Enter the position:");
+            int p=s.nextInt();
+            insertPos(x,p);
+            
+        }
+        else if(ch==3){
+            System.out.println("Enter the element:");
+            int x=s.nextInt();
+            insertLast(x);
+        }
+        else if(ch==4){
+            display();
+        }
+        else if(ch==5){
+           deleteBeg();
+        }
+        else if(ch==6){
+            System.out.println("Enter the position");
+            int p=s.nextInt();
+            deletePos(p);
+        }
+        else if(ch==7){
+            deleteLast();
+        }
+        else if(ch==8){
+            break;
+        }
+    }
+    }
+}
