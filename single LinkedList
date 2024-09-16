@@ -1,0 +1,122 @@
+import java.util.*;
+public class LinkedList{
+    public static Node head,tail;
+    public static class Node {
+        int d;
+        Node next;
+        Node(int d){
+            this.d=d;
+        }
+}
+public static void InsertBeg(int x){
+    Node n=new Node(x);
+    if(head==null){
+        head=tail=n;
+    }
+    n.next=head;
+    head=n;
+}
+public static void InsertPos(int x,int p){
+    Node n=new Node(x);
+    if(head==null){
+        head=tail=n;
+    }
+    if(p==1){
+        InsertBeg(x);
+        return;
+    }
+    int i=1;
+    Node temp=head;
+    Node pre=null;
+    while(temp.next!=null&&i<p-1){
+        pre=temp;
+        temp=temp.next;
+        i++;
+    }
+    pre.next=n;
+    n.next=temp;
+}
+public static void InsertLast(int x){
+    Node n=new Node(x);
+    if(head==null){
+        head=tail=n;
+    }
+    tail.next=n;
+    tail=n;
+}
+public static void deleteBeg(){
+    head=head.next;
+}
+public static void deletePos(int p){
+    Node temp=head;
+    Node pre=null;
+    if(p==1){
+        deleteBeg();
+        return;
+    }
+    int i=1;
+    while(i<p-1&&temp.next!=null){
+        pre=temp;
+        temp=temp.next;
+    }
+    pre.next=temp.next;
+}
+public static void deleteLast(){
+    Node temp=head;
+    while(temp.next.next!=null){
+        temp=temp.next;
+    }
+    temp.next=null;
+    tail=temp;
+}
+public static void display(){
+    Node temp=head;
+    while(temp!=null){
+        System.out.print(temp.d+" ");
+        temp=temp.next;
+    }
+}
+public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    while(true){
+        System.out.println("1.Insert at Begining\n2.Insert at position\n3.Insert at Last\n4.Delete at Begining\n5.Delete at position\n6.Delete at Last\n7.Display\n8.Exit");
+        System.out.println("Enter your choice:");
+        int ch=s.nextInt();
+        if(ch==1){
+            System.out.println("Enter the element:");
+            int x=s.nextInt();
+            InsertBeg(x);
+        }
+        else if(ch==2){
+            System.out.println("Enter the element:");
+            int x=s.nextInt();
+            System.out.println("Enter the position:");
+            int p=s.nextInt();
+            InsertPos(x,p);
+        }
+        else if(ch==3){
+            System.out.println("Enter the element:");
+            int x=s.nextInt();
+            InsertLast(x);
+        }
+        else if(ch==4){
+            deleteBeg();
+        }
+        else if(ch==5){
+            System.out.println("Enter the position");
+            int p=s.nextInt();
+            deletePos(p);
+        }
+        else if(ch==6){
+            deleteLast();
+        }
+        else if(ch==7){
+            display();
+        }
+        else if(ch==8){
+            break;
+        }
+    }
+    
+    }
+}
