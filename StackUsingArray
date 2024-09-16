@@ -1,0 +1,67 @@
+import java.util.*;
+
+public class MyStack{
+   public static int top=-1;
+ static int a[];
+    MyStack(int n){
+        top=-1;
+       this.a=new int[n]; 
+    }
+public static void push(int x){
+    if(top==a.length-1){
+        System.out.println("Stack is overflow");
+        return;
+    }
+    top++;
+    a[top]=x;
+    
+}
+public static void pop(){
+    if(top==-1){
+        System.out.println("Stack is under flow");
+        return;
+    }
+    System.out.println(a[top]+" is delete");
+    top--;
+}
+public static void display(){
+    if(top==-1){
+        System.out.println("Stack is empty");
+        return;
+    }
+    for(int i=top;i>=0;i--){
+        System.out.println(a[i]);
+    }
+}
+public static void peek(){
+    System.out.println(a[top]);
+}
+public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("Enter the size of the stack");
+    int n=s.nextInt();
+    MyStack s1=new MyStack(n);
+    for(;;){
+    System.out.println("1.Push\n2.Pop\n3.Display\n4.Peek\n5.Exit");
+    System.out.println("Enter your choice:");
+    int ch=s.nextInt();
+    if(ch==1){
+        System.out.println("Enter the element:");
+        int x=s.nextInt();
+        push(x);
+    }
+    else if(ch==2){
+        pop();
+    }
+    else if(ch==3){
+        display();
+    }
+    else if(ch==4){
+        peek();
+    }
+    else if(ch==5){
+        break;
+    }
+}
+}
+}
