@@ -1,0 +1,68 @@
+import java.util.*;
+public class Stack{
+    public static Node head;
+    public static class Node{
+        int d;
+        Node next;
+        Node(int d){
+            this.d=d;
+        }
+    }
+    public static void push(int x){
+        Node n=new Node(x);
+        if(n==null){
+            System.out.println("Stack is overflow");
+            return;
+        }
+        n.next=head;
+        head=n;
+    }
+    public static void pop(){
+        if(head==null){
+            System.out.println("Stack is under flow");
+            return;
+        }
+        head=head.next;
+        
+    }
+    public static void display(){
+        Node temp=head;
+        while(temp!=null){
+            System.out.println(temp.d+" ");
+            temp=temp.next;
+        }
+    }
+    public static void peek(){
+        if(head==null){
+            System.out.println("Stack is empty");
+            return ;
+        }
+        System.out.println(head.d);
+    }
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        while(true){
+             System.out.println("1.Push\n2.Pop\n3.Display\n4.Peek\n5.Exit");
+    System.out.println("Enter your choice:");
+    int ch=s.nextInt();
+    if(ch==1){
+        System.out.println("Enter the element:");
+        int x=s.nextInt();
+        push(x);
+    }
+    else if(ch==2){
+        pop();
+    }
+    else if(ch==3){
+        display();
+    }
+    else if(ch==4){
+        peek();
+    }
+    else if(ch==5){
+        break;
+    }
+}
+        
+    }
+}
