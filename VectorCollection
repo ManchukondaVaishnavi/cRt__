@@ -1,0 +1,19 @@
+import java.util.*;
+public class VectorCollection{
+    public static void main(String args[]){
+   Vector<Integer> v=new Vector<>();
+   System.out.println(v);
+   System.out.println(v.capacity());
+  System.out.println(v.size());
+ for(int i=0;i<=21;i++){
+     v.add(i);
+     
+ }
+ System.out.println(v);
+ System.out.println(v.capacity());
+ System.out.println(v.size());
+ v.addElement(22);
+ System.out.println(v);
+ 
+    }
+}
