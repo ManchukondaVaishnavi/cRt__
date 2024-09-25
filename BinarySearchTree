@@ -1,0 +1,125 @@
+import java.util.*;
+public class BinarySearchTree{
+    public static Node root;
+    public static class Node{
+        int d;
+        Node left;
+        Node right;
+        public Node(int d){
+            this.d=d;
+        }
+    }
+    public static void CreateRoot(int x){
+        Node n=new Node(x);
+        if(root==null){
+            root=n;
+        }
+    }
+    public static Node Insert(int x,Node n1){
+        Node n=new Node(x);
+        if(n1==null){
+            n1=n;
+            return root;
+        }
+        else if(root.d>x){
+            root.left=Insert(x,n1.left);
+        }
+        else{
+            root.right=Insert(x,n1.right);
+        }
+        return n1;
+    }
+    public static void Search(int x,Node root){
+        if(root!=null&&root.d==x){
+            System.out.println("Element is present");
+            return;
+        }
+        else if(root!=null&&root.d>x){
+            Search(x,root.left);
+        }
+        else if(root!=null&&root.d<x){
+            Search(x,root.right);
+        }
+        
+    }
+    public static void Inorder(Node n){
+        if(n!=null){
+        Inorder(n.left);
+        System.out.print(n.d+" ");
+        Inorder(n.right);
+        }
+        
+    }
+    public static void postorder(Node n){
+        if(n!=null){
+            postorder(n.left);
+            postorder(n.right);
+            System.out.print(n.d+" ");
+        }
+    }
+    public static void preorder(Node n){
+        if(n!=null){
+            System.out.print(n.d+" ");
+            preorder(n.left);
+            preorder(n.right);
+        }
+    }
+    public static int max(){
+        Node temp=root;
+        while(temp.right!=null){
+            temp=temp.right;
+        }
+        return temp.d;
+    }
+    public static int min(){
+        Node temp=root;
+        while(temp.left!=null){
+            temp=temp.left;
+        }
+        return temp.d;
+    }
+    public static void main(String args[]){
+        Scanner s= new Scanner(System.in);
+        for(;;){
+            System.out.println("1.Create Root\n2.Insert\n3.Search\n4.Inorder\n5.Postorder\n6.Preorder\n7.Maximum\n8.Minimum\n9.Exit");
+            System.out.println("Enter your choice:");
+            int ch=s.nextInt();
+            if(ch==1){
+                System.out.println("Enter the elemnt:");
+                int x=s.nextInt();
+                CreateRoot(x);
+            }
+            else if(ch==2){
+                System.out.println("Enter the element");
+                int x=s.nextInt();
+                Insert(x,root);
+            }
+            else if(ch==3){
+                System.out.println("Enter the element:");
+                int x=s.nextInt();
+                Search(x,root);
+            }
+            else if(ch==4){
+               Inorder(root);
+               System.out.println();
+            }
+            else if(ch==5){
+                postorder(root);
+                System.out.println();
+            }
+            else if(ch==6){
+                preorder(root);
+                System.out.println();
+            }
+            else if(ch==7){
+                System.out.println(max());
+            }
+            else if(ch==8){
+                System.out.println(min());
+            }
+            else if(ch==9){
+                break;
+            }
+        }
+    }
+}
